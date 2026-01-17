@@ -18,13 +18,61 @@ body{
       5px -5px 20px rgba(244, 114, 182, 0.1);
       font-weight: bold;
 }
-.dashboard p{
+@media (max-width:769px){
+  .dashboard{
+    padding: 12px;
+  }
+}
+.dashboard .head{
   color: #F8FAFC;
   font-size: 40px;
 }
-.dashboard p span{
+@media (max-width:769px){
+  .dashboard .head{
+    font-size: 32px;
+  }
+}
+.dashboard .head span{
   color: #FFD700;
-
+}
+.visiable{
+  color: #FFD700;
+  font-size: 40px;
+}
+@media (max-width:769px) {
+  .visiable {
+    font-size: 32px;
+  }
+}
+.visiable span{
+  padding: 7px;
+  display: inline-block;
+  margin-left: 8px;
+  background-color: #FFD700;
+  animation-name: updown;
+  animation-duration: .6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.visiable span:nth-child(2){
+  animation-delay: .2s;
+}
+.visiable span:nth-child(3){
+  animation-delay: .4s;
+}
+@keyframes updown {
+  0%{
+    transform: translateY(3px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-3px);
+    opacity: .4;
+  }
+}
+.display {
+  display: none;
 }
 .container{
   background-color: #1E293B;
@@ -53,6 +101,13 @@ body{
   transition: .3s;
   cursor: pointer;
 }
+@media (max-width:769px) {
+  .container div{
+    height: 100px;
+    font-size: 40px;
+  }
+}
+
 .container div:hover{
   background-color: #1E1E1E;
 }
